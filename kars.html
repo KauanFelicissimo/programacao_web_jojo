@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Jonathan</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <div id="sidebar-placeholder"></div>
+
+
+
+    <div class="conteudo">
+        <div class="imagem dio">
+
+            <img
+                src="https://static.jojowiki.com/images/thumb/e/e2/latest/20240713181411/Kars_EoH.png/400px-Kars_EoH.png"
+                alt="Imagem de Dio Brando" width="400" height="400"
+            >
+            <button id="botao-wryyy" type="button">
+                WRYYYYYYY!!!
+            </button>
+
+            <audio id="som-wryyy" src="audio/dio_wryyy_sound_effect.mp3" preload="auto"></audio>
+
+        </div>
+        <div class="texto dio">
+
+            <div class="informacoes dio">
+    <h2>Dio Brando</h2>
+    <p>Idade: 20 anos (aproximadamente)</p>
+    <p>Aniversário: Desconhecido</p>
+    <p>Signo do Zodíaco: Desconhecido</p>
+    <p>Zodíaco Chinês: Desconhecido</p>
+    <p>Profissão: Aristocrata (após ser adotado)</p>
+    <p>Nacionalidade: Britânica</p>
+    <p>Altura: Aproximadamente 1,95 m</p>
+    <p>Peso: Não informado oficialmente</p>
+</div>
+
+<div class="habilidades dio">
+    <h2>Habilidades</h2>
+    <p>Uso da Máscara de Pedra</p>
+    <p>Regeneração sobrenatural</p>
+    <p>Congelamento por contato</p>
+    <p>Space Ripper Stingy Eyes</p>
+</div>
+
+<div class="historia dio">
+    <h2>História</h2>
+    <p>
+        Dio Brando nasceu em uma família pobre e cresceu ao lado
+        de seu pai abusivo, Dario Brando. Após a morte de Dario,
+        Dio foi adotado por George Joestar, passando a viver na
+        mansão da família Joestar. Lá, tornou-se irmão adotivo
+        de Jonathan Joestar, a quem passou a tratar como rival,
+        tentando prejudicá-lo e tomar seu lugar na família.
+        Ao descobrir a Máscara de Pedra, Dio a utiliza em si mesmo
+        e se transforma em vampiro, adquirindo poderes sobrenaturais.
+        A partir daí, entra em confronto com Jonathan, que aprende
+        a utilizar o Hamon para combater as forças das trevas.
+    </p>
+</div>
+        </div>
+    </div>
+    <script>
+        const botaoHamon = document.getElementById('botao-wryyy');
+        const somHamon = document.getElementById('som-wryyy');
+
+        botaoHamon.addEventListener('click', async () => {
+            try {
+                somHamon.currentTime = 0;
+                await somHamon.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+    <script>
+        fetch('./components/sidebar-viloes.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+    <script>
+        fetch('./components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

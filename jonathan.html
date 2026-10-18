@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Jonathan</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+
+
+    <div class="conteudo">
+        <div class="imagem">
+
+            <img
+                src="https://static.wikia.nocookie.net/herois/images/f/f4/Jonathan_Anime.webp/revision/latest?cb=20251028034322&path-prefix=pt-br"
+                alt="Imagem de Jonathan Joestar"
+            >
+            <button id="botao-hamon" type="button">
+                ☀️ SUNLIGHT YELLOW OVERDRIVE!
+            </button>
+
+            <audio id="som-hamon" src="audio/videoplayback.m4a" preload="auto"></audio>
+
+        </div>
+        <div class="texto">
+
+            <div class="informacoes">
+                <h2>Jonathan Joestar</h2>
+                <p>Idade: 20 anos</p>
+                <p>Aniversário: 4 de Abril de 1868</p>
+                <p>Signo do Zodíaco: Áries</p>
+                <p>Zodíaco Chinês: Dragão</p>
+                <p>Profissão: Arqueólogo</p>
+                <p>Nacionalidade: Britânica</p>
+                <p>Altura: 1,95 m</p>
+                <p>Peso: 105 kg</p>
+            </div>
+
+            <div class="habilidades">
+                <h2>Habilidades</h2>
+                <p>Hamon</p>
+                <p>Zoom Punch</p>
+                <p>Sendo Hamon Overdrive</p>
+                <p>Sunlight Yellow Overdrive</p>
+            </div>
+
+            <div class="historia">
+                <h2>História</h2>
+                <p>
+                    Quando criança, Jonathan se envolveu num acidente
+                    de carruagem, resultando na morte de sua mãe,
+                    Mary Joestar. Esse mesmo acidente trouxe Dio
+                    Brando para sua vida. Depois de conhecer Dio,
+                    a vida de Jonathan vira um inferno enquanto Dio
+                    tenta quebrar o seu espírito por meio do domínio
+                    e do isolamento.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const botaoHamon = document.getElementById('botao-hamon');
+        const somHamon = document.getElementById('som-hamon');
+
+        botaoHamon.addEventListener('click', async () => {
+            try {
+                somHamon.currentTime = 0;
+                await somHamon.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-jojos.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de JoJos:', erro));
+    </script>
+    <script>
+        fetch('./components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
