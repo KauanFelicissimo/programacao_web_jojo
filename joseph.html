@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Joseph Joestar | Vilões de JoJo</title>
+</head>
+
+<body class="body-joseph">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem joseph">
+            <img src="https://static.wikia.nocookie.net/herois/images/7/7e/JosephJoestarAnime.webp/revision/latest?cb=20251101144317&path-prefix=pt-br"
+                alt="Joseph Joestar" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Joseph Joestar">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Joseph Joestar.</p>
+            </div>
+
+            <button id="botao-joseph" type="button">
+                🏃‍♂️Nigerundayo Smokey!!
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-joseph" preload="auto" src="./audio/nigerundayo-smokey.m4a"></audio>
+        </section>
+
+        <section class="texto joseph">
+            <div class="informacoes joseph">
+                <h2>Joseph Joestar</h2>
+                <p>Idade: 18 anos</p>
+                <p>Aniversário: 27 de setembro de 1920</p>
+                <p>Signo do Zodíaco: Libra</p>
+                <p>Zodíaco Chinês: Macaco</p>
+                <p>Ocupação: Vendedor de Imóveis</p>
+                <p>Nacionalidade: Britânica</p>
+                <p>Altura: 195 cm</p>
+                <p>Peso: 97 kg</p>
+            </div>
+
+            <div class="habilidades joseph">
+                <h2>Habilidades</h2>
+                <p>Hamon: técnica de combate que utiliza a energia vital do corpo</p>
+                <p>Prever a próxima frase do oponente: habilidade de antecipar os movimentos do inimigo</p>
+            </div>
+
+            <div class="historia joseph">
+                <h2>História</h2>
+                <p>Joseph Joestar é um jovem britânico que vive em uma época de grande transformação. Ele é conhecido por sua personalidade forte e determinação, além de ser um excelente lutador. Joseph enfrenta diversos desafios ao longo de sua jornada, incluindo conflitos com vilões poderosos e a descoberta de seu próprio potencial.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-joseph');
+        const somPersonagem = document.getElementById('som-joseph');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-jojos.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>

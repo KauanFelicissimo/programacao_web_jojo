@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Will Anthonio Zeppeli  | Jobros</title>
+</head>
+
+<body class="body-will">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem will">
+            <img src="https://static.wikia.nocookie.net/p__/images/e/e9/Golden_Spirit_SR_Will_I.png/revision/latest?cb=20260912204313&path-prefix=protagonist"
+                alt="Will Anthonio Zeppeli" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Will Anthonio Zeppeli">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Will Anthonio Zeppeli.</p>
+            </div>
+
+            <button id="botao-will" type="button">
+                🫰Hey baby!
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-will" preload="auto" src="./audio/hey-baby.mp3"></audio>
+        </section>
+
+        <section class="texto will">
+            <div class="informacoes will">
+                <h2>Will Anthonio Zeppeli</h2>
+                <p>Idade: 50 anos</p>
+                <p>Aniversário: 19 de janeiro de 1838</p>
+                <p>Signo do Zodíaco: Capricórnio</p>
+                <p>Zodíaco Chinês: Cachorro</p>
+                <p>Ocupação: Monge</p>
+                <p>Nacionalidade: Italiano</p>
+                <p>Altura: 177 cm</p>
+                <p>Peso: Desconhecido</p>
+            </div>
+
+            <div class="habilidades will">
+                <h2>Habilidades</h2>
+                <p>Hamon</p>
+                <p>Tendo estudado a técnica por anos com mestres no Tibete e treinado o próprio Jonathan, Zeppeli é um especialista quando se trata de usar o Hamon. Além de atacar, ele é capaz de usá-lo para outras aplicações, como pular, ficar na água, curar feridas, reviver plantas e até mesmo previsão limitada.</p>
+                <p>Zoom Punch</p>
+                <p>Sendo Hamon Overdrive</p>
+                <p>Sunlight Yellow Overdrive</p>
+            </div>
+
+            <div class="historia will">
+                <h2>História</h2>
+                <p>Giorno é o filho ilegítimo de DIO, concebido com o corpo roubado de Jonathan Joestar. Ele é apresentado como Haruno Shiobana. Ele fala de sua intenção de se juntar à poderosa gangue Passione e seu sonho de se tornar um "Gangstar". Giorno é um Usuário de Stand nato, empunhando a Gold Experience em batalha.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-will');
+        const somPersonagem = document.getElementById('som-will');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-jobros.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>

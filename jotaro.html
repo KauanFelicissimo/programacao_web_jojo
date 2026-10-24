@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Joseph Joestar | Vilões de JoJo</title>
+</head>
+
+<body class="body-jotaro">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem jotaro">
+            <img src="https://static.wikia.nocookie.net/herois/images/1/16/Golden_Spirit_SSR_Jotaro_I_StandOff.png/revision/latest?cb=20260829223317&path-prefix=pt-br"
+                alt="Jotaro Kujo" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Jotaro Kujo">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Jotaro Kujo.</p>
+            </div>
+
+            <button id="botao-jotaro" type="button">
+                ★ STAR PLATINUM ZA WARUDO!!
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-jotaro" preload="auto" src="./audio/star_platinum.m4a"></audio>
+        </section>
+
+        <section class="texto jotaro">
+            <div class="informacoes jotaro">
+                <h2>Jotaro Kujo</h2>
+                <p>Idade: 17 anos</p>
+                <p>Aniversário: 1 de fevereiro de 1970</p>
+                <p>Signo do Zodíaco: Aquário</p>
+                <p>Zodíaco Chinês: Cachorro</p>
+                <p>Profissão: Biólog Marinho</p>
+                <p>Nacionalidade: Japonês</p>
+                <p>Altura: 195 cm</p>
+                <p>Peso: 82 kg</p>
+            </div>
+
+            <div class="habilidades jotaro">
+                <h2>Habilidades</h2>
+                <p>Stand: Star Platinum</p>
+                <p>Para o tempo por 5 segundos</p>
+                <p>Star Finger</p>
+                <p>É dito que pode sim parar o tempo por mais de 5 segundos, porém, o limite para o corpo humano aguentar o tempo parado é de 5 segundos</p>
+            </div>
+
+            <div class="historia jotaro">
+                <h2>História</h2>
+                <p>Jotaro é um delinquente que vive uma vida normal até que o velho inimigo da Família Joestar, DIO, retorna. Jotaro viaja para o Egito para salvar sua mãe e parar o Vampiro de uma vez por todas.Empunhando o incrivelmente poderoso Star Platinum, Jotaro é o primeiro JoJo apresentado com um Stand e está entre os personagens mais conhecidos da série.</p>
+                <p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-jotaro');
+        const somPersonagem = document.getElementById('som-jotaro');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-jojos.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Joseph Joestar | Vilões de JoJo</title>
+</head>
+
+<body class="body-josuke">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem josuke">
+            <img src="https://static.wikia.nocookie.net/near-pure-good-hero/images/4/4f/Josuke.png/revision/latest?cb=20231026170456"
+                alt="Josuke Higashikata" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Josuke Higashikata">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Josuke Higashikata.</p>
+            </div>
+
+            <button id="botao-josuke" type="button">
+                💎 CRAZY DIAMOND!!
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-josuke" preload="auto" src="./audio/crazy-diamond.mp3"></audio>
+        </section>
+
+        <section class="texto josuke">
+            <div class="informacoes josuke">
+                <h2>Josuke Higashikata</h2>
+                <p>Idade: 16 anos</p>
+                <p>Aniversário: 21 de maio de 1983</p>
+                <p>Signo do Zodíaco: Gêmeos</p>
+                <p>Zodíaco Chinês: Porco</p>
+                <p>Ocupação: Estudante</p>
+                <p>Nacionalidade: Japonês</p>
+                <p>Altura: 180 cm</p>
+                <p>Peso: 82 kg</p>
+            </div>
+
+            <div class="habilidades josuke">
+                <h2>Habilidades</h2>
+                <p>Stand: Crazy Diamond</p>
+                <p>Pode restaurar objetos (e organismos) a um estado anterior em sua história</p>
+                <p>Pode reparar danos e curar ferimentos. Ele também pode reverter um item para seus componentes (por exemplo, uma mesa de madeira em madeira)</p>
+                <p>No entanto, este Stand não é sem limites: Crazy Diamond só pode restaurar o estado, não a vida, portanto, um corpo sem vida permaneceria morto mesmo depois de ser "consertado" pelo poder do Crazy Diamond. Além disso, o poder de cura não pode ser usado no próprio Josuke, ou estritamente falando, qualquer coisa que possa ser considerada parte de seu eu atual, corpo ou até mesmo suas roupas</p>
+            </div>
+
+            <div class="historia josuke">
+                <h2>História</h2>
+                <p>Josuke é um aluno do primeiro ano do ensino médio que mora na cidade de Morioh. Ele logo conhece Jotaro Kujo, que o informa que ele é filho ilegítimo de Joseph Joestar. Depois que seu avô morre, Josuke assume a responsabilidade de proteger sua amada cidade dos malévolos usuários do Stand. Josuke empunha Crazy Diamond, um poderoso Stand com o poder de consertar quase tudo.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-josuke');
+        const somPersonagem = document.getElementById('som-josuke');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-jojos.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>

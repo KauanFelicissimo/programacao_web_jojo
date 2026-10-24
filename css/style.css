@@ -492,7 +492,7 @@ body.body-kars {
     display: block;
     width: 100%;
     max-width: 450px;
-    height: autoz;
+    height: auto;
     object-fit: contain;
 }
 
@@ -1206,3 +1206,574 @@ body.body-yoshikage-kira {
         #botao-dio:active {
             transform: scale(0.96);
         }
+
+/* JOJOS */
+
+/* Joseph */
+
+        body.body-joseph {
+            --jojo-bg: #171827;
+            --jojo-panel: #70BD14;
+            --jojo-accent: #A45E91;
+            --jojo-gold: #632C8D;
+            --jojo-text: #060606;
+            --jojo-shadow: #100F19;
+            background-color: var(--jojo-bg);
+            background-image: url('https://jojocomparisons.github.io/images/BT22/bd-00050-1090px.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--jojo-text);
+        }
+
+.informacoes.joseph,
+.habilidades.joseph,
+.historia.joseph {
+    background-color: var(--jojo-panel);
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.joseph h2 {
+    color: var(--jojo-gold);
+}
+
+#botao-joseph {
+    background: linear-gradient(135deg, var(--jojo-panel), var(--jojo-accent));
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--jojo-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-joseph:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--jojo-gold) 60%, transparent);
+}
+
+#botao-joseph:active {
+    transform: scale(0.96);
+}
+
+.imagem.joseph img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.imagem.joseph .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--jojo-accent);
+    border-radius: 12px;
+    color: var(--jojo-text);
+}
+
+/* Joseph */
+
+/* Jotaro */
+
+body.body-jotaro {
+            --jojo-bg: #171827;
+            --jojo-panel: #040606;
+            --jojo-accent: #8f16d0;
+            --jojo-gold: #ffd143;
+            --jojo-text: white;
+            --jojo-shadow: #100F19;
+            background-color: var(--jojo-bg);
+            background-image: url('https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/04/Featured-Image-Stardust-Crusaders-Cropped.jpg?w=1600&h=900&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--jojo-text);
+        }
+
+.informacoes.jotaro,
+.habilidades.jotaro,
+.historia.jotaro {
+    background-color: var(--jojo-panel);
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.jotaro h2 {
+    color: var(--jojo-gold);
+}
+
+#botao-jotaro {
+    background: linear-gradient(135deg, var(--jojo-panel), var(--jojo-accent));
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--jojo-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-jotaro:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--jojo-gold) 60%, transparent);
+}
+
+#botao-jotaro:active {
+    transform: scale(0.96);
+}
+
+.imagem.jotaro img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.imagem.jotaro .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--jojo-accent);
+    border-radius: 12px;
+    color: var(--jojo-text);
+}
+
+/* Jotaro */
+
+
+/* Josuke */
+
+
+body.body-josuke {
+            --jojo-bg: #171827;
+            --jojo-panel: #1e1b31;
+            --jojo-accent: #8f16d0;
+            --jojo-gold: #ffd143;
+            --jojo-text: #d1eef0;
+            --jojo-shadow: #100F19;
+            background-color: var(--jojo-bg);
+            background-image: url('/fundo/morioh.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--jojo-text);
+        }
+
+.informacoes.josuke,
+.habilidades.josuke,
+.historia.josuke {
+    background-color: var(--jojo-panel);
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.josuke h2 {
+    color: var(--jojo-gold);
+}
+
+#botao-josuke {
+    background: linear-gradient(135deg, var(--jojo-panel), var(--jojo-accent));
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--jojo-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-josuke:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--jojo-gold) 60%, transparent);
+}
+
+#botao-josuke:active {
+    transform: scale(0.96);
+}
+
+.imagem.josuke img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.imagem.josuke .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--jojo-accent);
+    border-radius: 12px;
+    color: var(--jojo-text);
+}
+
+
+/* Josuke */
+
+
+/* Giorno */
+
+body.body-giorno {
+            --jojo-bg: #171827;
+            --jojo-panel: #CC72C3;
+            --jojo-accent: #8f16d0;
+            --jojo-gold: #ffd143;
+            --jojo-text: #393016;
+            --jojo-shadow: #100F19;
+            background-color: var(--jojo-bg);
+            background-image: url('https://jojocomparisons.github.io/images/VA20/bd-03710-1090px.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--jojo-text);
+        }
+
+.informacoes.giorno,
+.habilidades.giorno,
+.historia.giorno {
+    background-color: var(--jojo-panel);
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.giorno h2 {
+    color: var(--jojo-gold);
+}
+
+#botao-giorno {
+    background: linear-gradient(135deg, var(--jojo-panel), var(--jojo-accent));
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--jojo-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-giorno:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--jojo-gold) 60%, transparent);
+}
+
+#botao-giorno:active {
+    transform: scale(0.96);
+}
+
+.imagem.giorno img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.imagem.giorno .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--jojo-accent);
+    border-radius: 12px;
+    color: var(--jojo-text);
+}
+
+/* Giorno */
+
+
+/* Jolyne */
+
+body.body-jolyne {
+            --jojo-bg: #171827;
+            --jojo-panel: #0dbfd6;
+            --jojo-accent: #D780AF;
+            --jojo-gold: #0E326F;
+            --jojo-text: #C5F414;
+            --jojo-shadow: #100F19;
+            background-color: var(--jojo-bg);
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUkoo_QjMUgTAmQtF1Ae2wY5hZn5KrmewLRgTlcewW0oYOO65rUL5OETTm&s=10');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--jojo-text);
+        }
+
+.informacoes.jolyne,
+.habilidades.jolyne,
+.historia.jolyne {
+    background-color: var(--jojo-panel);
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.jolyne h2 {
+    color: var(--jojo-gold);
+}
+
+#botao-jolyne {
+    background: linear-gradient(135deg, var(--jojo-panel), var(--jojo-accent));
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--jojo-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-jolyne:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--jojo-gold) 60%, transparent);
+}
+
+#botao-jolyne:active {
+    transform: scale(0.96);
+}
+
+.imagem.jolyne img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.imagem.jolyne .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--jojo-accent);
+    border-radius: 12px;
+    color: var(--jojo-text);
+}
+
+
+/* Jolyne */
+
+
+/* Johnny */
+
+body.body-johnny {
+            --jojo-bg: #171827;
+            --jojo-panel: #1d57c2;
+            --jojo-accent: #C32420;
+            --jojo-gold: #EAEFF2;
+            --jojo-text: #EAEFF2;
+            --jojo-shadow: #100F19;
+            background-color: var(--jojo-bg);
+            background-image: url('/fundo/sbr.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--jojo-text);
+        }
+
+.informacoes.johnny,
+.habilidades.johnny,
+.historia.johnny {
+    background-color: var(--jojo-panel);
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.johnny h2 {
+    color: var(--jojo-accent);
+}
+
+#botao-johnny {
+    background: linear-gradient(135deg, var(--jojo-panel), var(--jojo-accent));
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--jojo-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-johnny:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--jojo-gold) 60%, transparent);
+}
+
+#botao-johnny:active {
+    transform: scale(0.96);
+}
+
+.imagem.johnny img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.imagem.johnny .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--jojo-accent);
+    border-radius: 12px;
+    color: var(--jojo-text);
+}
+
+
+/* Johnny */
+
+/* Jojos */
+
+
+/* Jobros */
+
+
+/* Will a Zepelli */
+
+body.body-will {
+            --jojo-bg: #171827;
+            --jojo-panel: #F2F2F2;
+            --jojo-accent: #A62B2B;
+            --jojo-gold: #1A1A1A;
+            --jojo-text: #232526;
+            --jojo-shadow: #100F19;
+            background-color: var(--jojo-bg);
+            background-image: url('https://static.tvtropes.org/trope_videos_transcoded/images/sd/h8a9nz.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--jojo-text);
+        }
+
+.informacoes.will,
+.habilidades.will,
+.historia.will {
+    background-color: var(--jojo-panel);
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.will h2 {
+    color: var(--jojo-accent);
+}
+
+#botao-will {
+    background: linear-gradient(135deg, var(--jojo-panel), var(--jojo-accent));
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--jojo-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-will:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--jojo-gold) 60%, transparent);
+}
+
+#botao-will:active {
+    transform: scale(0.96);
+}
+
+.imagem.will img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.imagem.will .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--jojo-accent);
+    border-radius: 12px;
+    color: var(--jojo-text);
+}
+
+/* Will a Zeppeli */
+
+/* Jovros */

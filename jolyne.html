@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Jolyne Cujoh | JoJos</title>
+</head>
+
+<body class="body-jolyne">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem jolyne">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/00f39406-ea15-4816-a71f-48c412d96de6/dfhe5qi-2504ba1b-f78c-4acc-a67c-0874fa9cf359.png/v1/fill/w_1280,h_3129/jolyne_cujoh_render_2__by_wtfbooomsh_dfhe5qi-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzEyOSIsInBhdGgiOiIvZi8wMGYzOTQwNi1lYTE1LTQ4MTYtYTcxZi00OGM0MTJkOTZkZTYvZGZoZTVxaS0yNTA0YmExYi1mNzhjLTRhY2MtYTY3Yy0wODc0ZmE5Y2YzNTkucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.UZNjOT4MUx8-fcg4WHNDvFtdWiKeHlLjQggqGPIi9_I"
+                alt="Jolyne Cujoh" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Jolyne Cujoh">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Jolyne Cujoh.</p>
+            </div>
+
+            <button id="botao-jolyne" type="button">
+                🪡Stone Free
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-jolyne" preload="auto" src="./audio/stone-free.mp3"></audio>
+        </section>
+
+        <section class="texto jolyne">
+            <div class="informacoes jolyne">
+                <h2>Jolyne Cujoh</h2>
+                <p>Idade: 19 anos</p>
+                <p>Aniversário: 20 de agosto de 1992</p>
+                <p>Signo do Zodíaco: Leão</p>
+                <p>Zodíaco Chinês: Macaco</p>
+                <p>Ocupação: Prisioneira</p>
+                <p>Nacionalidade: Nipo-Americana</p>
+                <p>Altura: 174.5 cm</p>
+                <p>Peso: 58 kg</p>
+            </div>
+
+            <div class="habilidades jolyne">
+                <h2>Habilidades</h2>
+                <p>Stand: Stone Free</p>
+                <p>Stone Free concede a Jolyne a habilidade de desvendar partes de seu corpo em uma corda. Isso o torna um Stand muito versátil, permitindo que ela ouça as comunicações, bem como escape e se esconda, desvendando partes de si mesma em uma corda. Ela pode desenrolar o barbante para fazê-lo viajar mais longe, mas o torna mais vulnerável. ou agrupá-los para torná-los muito mais poderosos. Quando ela monta a corda, Jolyne pode materializar adequadamente Stone Free, parcial ou totalmente. Stone Free é um Stand humanóide que tem proeza física comparável aos Stands mais fortes, com A's em poder destrutivo, durabilidade e potencial de desenvolvimento.</p>
+            </div>
+
+            <div class="historia jolyne">
+                <h2>História</h2>
+                <p>A infância de Jolyne foi muitas vezes passada sem o pai, pois seu trabalho frequentemente exigia que ele deixasse o país. Mesmo com febre alta, Jotaro não conseguiu voltar do Japão para ficar com ela. Aos 14 anos, sua vida de adolescente começou a decair ao ser confundida com uma suspeita de um roubo que não cometeu e depois fugir de um policial roubando uma motocicleta. Ao ser presa e detida em uma cela, falsamente acusada do crime, ela e sua mãe alegaram inocência e até imploraram a Jotaro para pagar a fiança. No entanto, como ele não acreditou nela, no final, ela foi enviada para a detenção juvenil.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-jolyne');
+        const somPersonagem = document.getElementById('som-jolyne');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-jojos.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>

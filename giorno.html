@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Giorno Giovanna | JoJos</title>
+</head>
+
+<body class="body-giorno">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem giorno">
+            <img src="https://static.jojowiki.com/images/thumb/9/9a/latest/20251210234809/OraDora_Unit_5_SR_Giorno.png/800px-OraDora_Unit_5_SR_Giorno.png"
+                alt="Giorno Giovanna" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Giorno Giovanna">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Giorno Giovanna.</p>
+            </div>
+
+            <button id="botao-giorno" type="button">
+                🍃 GOLD EXPERIENCE!!
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-giorno" preload="auto" src="./audio/gold-experience.mp3"></audio>
+        </section>
+
+        <section class="texto giorno">
+            <div class="informacoes giorno">
+                <h2>Giorno Giovanna</h2>
+                <p>Idade: 15 anos</p>
+                <p>Aniversário: 16 de abril de 1985</p>
+                <p>Signo do Zodíaco: Áries</p>
+                <p>Zodíaco Chinês: Boi</p>
+                <p>Ocupação: Chefe da Passione</p>
+                <p>Nacionalidade: Nipo-Britânico</p>
+                <p>Altura: 172 cm(manga)<br>175cm (anime)</p>
+                <p>Peso: Desconhecido</p>
+            </div>
+
+            <div class="habilidades giorno">
+                <h2>Habilidades</h2>
+                <p>Stand: Gold Experience</p>
+                <p>Gold Experience é um dos Stands mais versáteis da série. Tem a capacidade de criar e manipular a vida, que Giorno usa com mais frequência para produzir plantas e pequenos animais. Ambos podem ser usados ​​para uma variedade de propósitos, desde o disfarce até o rastreamento de origens. Como um Power-type de curto alcance, também é capaz de desencadear uma rápida enxurrada de socos, que Giorno usa quase exclusivamente com intenção letal.</p>
+            </div>
+
+            <div class="historia giorno">
+                <h2>História</h2>
+                <p>Giorno é o filho ilegítimo de DIO, concebido com o corpo roubado de Jonathan Joestar. Ele é apresentado como Haruno Shiobana. Ele fala de sua intenção de se juntar à poderosa gangue Passione e seu sonho de se tornar um "Gangstar". Giorno é um Usuário de Stand nato, empunhando a Gold Experience em batalha.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-giorno');
+        const somPersonagem = document.getElementById('som-giorno');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-jojos.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Johnny Joestar | JoJos</title>
+</head>
+
+<body class="body-johnny">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem johnny">
+            <img src="https://static.wikia.nocookie.net/p__/images/2/2a/JohnnyJoestar-SBRAnime.png/revision/latest?cb=20260414125937&path-prefix=protagonist"
+                alt="Johnny Joestar" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Johnny Joestar">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Johnny Joestar.</p>
+            </div>
+
+            <button id="botao-johnny" type="button">
+                Tusk!
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-johnny" preload="auto" src="./audio/tusk.mp3"></audio>
+        </section>
+
+        <section class="texto johnny">
+            <div class="informacoes johnny">
+                <h2>Johnny Joestar</h2>
+                <p>Idade: 19 anos</p>
+                <p>Cavalo: Slow Dancer</p>
+                <p>Aniversário: 19 de maio de 1872</p>
+                <p>Signo do Zodíaco: Touro </p>
+                <p>Zodíaco Chinês: Macaco</p>
+                <p>Profissão: Jôquei</p>
+                <p>Nacionalidade: Americano</p>
+                <p>Altura: 172 cm</p>
+                <p>Peso: 54 kg</p>
+            </div>
+
+            <div class="habilidades johnny">
+                <h2>Habilidades</h2>
+                <p>Spin</p>
+                <p>Stand: Tusk</p>
+                <p>Semelhante ao Echoes da Parte 4, o Tusk assume várias formas, ou “ATOs”. Assim como Echoes, Tusk é capaz de alternar entre seus diversos ATOs uma vez que eles são desbloqueados. Como outros Stands, como Dragon's Dream ou Cinderella, as habilidades do Tusk estão intimamente ligadas a um fenômeno sobrenatural inerente ao mundo de JoJo's Bizarre Adventure, ou seja, o Spin.</p>
+                <h2>ACT 1</h2>
+                <p>
+                O Tusk ACT1 é despertado na Palma do Diabo quando o cadáver se junta à mão esquerda de Johnny, manifestando seu Stand com a habilidade de girar suas unhas e atirá-las como se fossem balas, e crescer suas unhas em segundos.</p>
+                <h2>ACT 2</h2>
+                <p>
+                O Tusk ACT2 se manifesta quando Johnny atira suas unhas enquanto incorporando o Retângulo de Ouro na sua batalha contra Sandman Apesar de suas unhas demorarem mais para crescer, as unhas possuem mais poder e uma nova habilidade que permite que os buracos feitos pelas unhas sigam o alvo por uma curta quantia de tempo.
+                <h2>ACT 3</h2>
+                <p>O Tusk ACT3 é a forma base final de Tusk e se manifesta quando Johnny atira em si mesmo com uma unha que incorpora o Retângulo de Ouro, permitindo-o transferir partes do seu corpo pelos buracos criados pelas unhas para atirar de direções diferentes. Ele foi despertando quando Johnny foi aconselhado por Jesus em uma luta contra Axl RO.</p>
+                <h2>ACT 4</h2>
+                <p>O Tusk ACT4 se manifesta como resultado de Johnny utilizando o poder de Slow Dancer combinado com o retângulo de ouro, que permite que Johnny dispare unhas de Spin Dourado que possue rotação infinita. O ACT4 possui força o suficiente para abrir a parede dimensional do D4C Love Train, e prender qualquer um atingindo por ele em um só lugar indefinidamente.</p>
+            </div>
+
+            <div class="historia johnny">
+                <h2>História</h2>
+                <p>Um ex -prodígio das corridas de cavalos que se tornou paraplégico, Johnny se junta à corrida SBR para descobrir o segredo por trás das Steel Balls de Gyro Zeppeli, pois são a única coisa capaz de restaurar suas pernas. Ao longo da corrida, Johnny se torna um usuário de Spin, bem como um usuário de Stand quando adquire Tusk.</p>
+                <p>É a história dos primeiros passos dele. Não fisicamente, mas no sentido de passar da juventude para a idade adulta.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-johnny');
+        const somPersonagem = document.getElementById('som-johnny');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-jojos.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>
