@@ -1,242 +1,1208 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
+
     box-sizing: border-box;
+
 }
 
 body {
+
     background-image: url('https://static.tvtropes.org/trope_videos_transcoded/images/sd/h8a9nz.jpg');
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+body.body-dio {
+    --villain-bg: #173C32;
+    --villain-panel: #24634B;
+    --villain-accent: #8DAD65;
+    --villain-gold: #D5C75A;
+    --villain-text: #F3E8C8;
+    --villain-shadow: #0D211C;
+
+    background-color: var(--villain-bg);
+    background-image: url('COLOQUE_AQUI_A_URL_DO_FUNDO_DO_DIO_PARTE_1');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: 'Noto Sans JP', sans-serif;
+
+    color: var(--villain-text);
 }
 
 .conteudo {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 25px;
+
     width: 100%;
+
     max-width: 1400px;
+
     margin: 0 auto;
+
     padding: 20px;
+
     box-sizing: border-box;
+
 }
 
 .imagem {
+
     flex: 1;
+
     min-width: 0;
+
     display: flex;
-    flex-direction: column; /* Imagem em cima, botão em baixo */
+
+    flex-direction: column;
+    /* Imagem em cima, botão em baixo */
+
     align-items: center;
+
     gap: 15px;
+
 }
 
 .imagem img {
+
     display: block;
+
     width: 100%;
+
     max-width: 450px;
+
     height: auto;
+
     object-fit: contain;
+
 }
 
 #botao-hamon {
+
     background: linear-gradient(135deg, #ffe066, #ff9800);
+
     color: #392000;
+
     border: 2px solid #fff0a8;
+
     border-radius: 12px;
+
     padding: 12px 24px;
 
     font-family: 'Noto Sans JP', sans-serif;
+
     font-size: 16px;
+
     font-weight: bold;
 
     cursor: pointer;
+
     box-shadow: 0 0 12px rgba(255, 193, 7, 0.5);
+
     transition: transform 0.2s, box-shadow 0.2s;
+
 }
 
 #botao-hamon:hover {
+
     transform: scale(1.05);
+
     box-shadow: 0 0 22px rgba(255, 193, 7, 0.8);
+
 }
 
 #botao-hamon:active {
+
     transform: scale(0.97);
+
 }
 
 #botao-wryyy {
+
     background: linear-gradient(135deg, #ffe066, #ff9800);
+
     color: #392000;
+
     border: 2px solid #fff0a8;
+
     border-radius: 12px;
+
     padding: 12px 24px;
 
     font-family: 'Noto Sans JP', sans-serif;
+
     font-size: 16px;
+
     font-weight: bold;
 
     cursor: pointer;
+
     box-shadow: 0 0 12px rgba(255, 193, 7, 0.5);
+
     transition: transform 0.2s, box-shadow 0.2s;
+
 }
 
 #botao-wryyy:hover {
+
     transform: scale(1.05);
+
     box-shadow: 0 0 22px rgba(255, 193, 7, 0.8);
+
 }
 
 #botao-wryyy:active {
+
     transform: scale(0.97);
+
 }
 
 .texto {
+
     flex: 0 1 350px;
+
     min-width: 0;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 20px;
+
     text-align: center;
+
 }
 
 /* Primeiro bloco */
+
 .informacoes {
+
     background-color: #4F4CB6;
+
     color: #000;
+
     padding: 15px;
+
     border-radius: 10px;
+
 }
 
 .informacoes.dio {
+
     background-color: #7C1232;
+
 }
 
 /* Segundo bloco */
+
 .habilidades {
+
     background-color: #FFCC2C;
+
     color: #000;
+
     padding: 15px;
+
     border-radius: 10px;
+
 }
+
 .habilidades.dio {
+
     background-color: #6843B6;
+
     color: black;
+
 }
 
 /* Terceiro bloco */
+
 .historia {
+
     background-color: #FCD6A6;
+
     color: #000;
+
     padding: 15px;
+
     border-radius: 10px;
+
 }
+
 .historia.dio {
+
     background-color: #3D2F26;
+
     color: white;
+
 }
 
 .texto h2 {
+
     margin-top: 5px;
+
 }
 
 .texto p {
+
     margin: 10px 0;
+
 }
 
 @media (max-width: 700px) {
+
     .conteudo_jonathan {
+
         flex-direction: column;
+
         align-items: center;
+
     }
 
     .imagem_jonathan {
+
         width: 100%;
+
     }
 
     .imagem_jonathan img {
+
         max-width: 300px;
+
     }
 
     .texto {
+
         width: 100%;
+
         flex-basis: auto;
+
     }
+
 }
 
 /* Barra lateral */
+
 .sidebar {
+
     position: fixed;
+
     top: 50%;
+
     left: 8px;
+
     transform: translateY(-50%);
+
     width: 220px;
+
     min-width: 220px;
+
     background-color: #25243A;
+
     color: #FFFFFF;
+
     flex: 0 0 180px;
+
     padding: 20px 12px;
+
     border-radius: 10px;
+
     box-sizing: border-box;
+
     align-self: center;
+
 }
+
 /* Sidebar */
+
 .sidebar {
+
     flex: 0 0 180px;
+
     align-self: center;
+
 }
 
 /* Título da barra */
+
 .sidebar h2 {
+
     color: #DACE7B;
+
     text-align: center;
+
     font-size: 22px;
+
     margin-top: 0;
+
     margin-bottom: 20px;
+
 }
 
 /* Lista de personagens */
+
 .sidebar nav {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 8px;
+
 }
 
 /* Links */
+
 .sidebar nav a {
+
     display: block;
+
     padding: 12px 10px;
+
     color: #FFFFFF;
+
     text-decoration: none;
+
     border-radius: 6px;
+
     transition: background-color 0.2s;
+
 }
 
 /* Quando passar o mouse */
+
 .sidebar nav a:hover {
+
     background-color: #4F4CB6;
+
 }
 
 @media (max-width: 900px) {
+
     .conteudo {
+
         flex-wrap: wrap;
+
     }
 
     .sidebar {
+
         position: static;
+
         transform: none;
+
         width: 100%;
+
         min-width: 0;
+
     }
 
     .sidebar nav {
+
         flex-direction: row;
+
         flex-wrap: wrap;
+
     }
 
     .sidebar nav a {
+
         flex: 1 1 140px;
+
         text-align: center;
+
     }
+
 }
+
+body.body-kars {
+    --villain-bg: #171827;
+    --villain-panel: #4A244F;
+    --villain-accent: #A45E91;
+    --villain-gold: #C7B6A0;
+    --villain-text: #F0E8F2;
+    --villain-shadow: #100F19;
+
+    background-color: var(--villain-bg);
+    background-image: url('https://art.ngfiles.com/images/1579000/1579964_roninblitz_the-pillar-men-s-roman-pillar.jpg?f1610055175');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--villain-text);
+}
+
+.informacoes.kars,
+.habilidades.kars,
+.historia.kars {
+    background-color: var(--villain-panel);
+    color: var(--villain-text);
+    border: 2px solid var(--villain-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.kars h2 {
+    color: var(--villain-gold);
+}
+
+#botao-kars {
+    background: linear-gradient(135deg, var(--villain-panel), var(--villain-accent));
+    color: var(--villain-text);
+    border: 2px solid var(--villain-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--villain-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-kars:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--villain-gold) 60%, transparent);
+}
+
+#botao-kars:active {
+    transform: scale(0.96);
+}
+
+.imagem.kars img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: autoz;
+    object-fit: contain;
+}
+
+.imagem.kars .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--villain-accent);
+    border-radius: 12px;
+    color: var(--villain-text);
+}
+
+body:has(.imagem.dio) {
+
+    --villain-bg: #173C32;
+
+    --villain-panel: #24634B;
+
+    --villain-accent: #8DAD65;
+
+    --villain-gold: #D5C75A;
+
+    --villain-text: #F3E8C8;
+
+    --villain-shadow: #0D211C;
+
+    background-image: url('https://static.jojowiki.com/images/thumb/a/a6/latest/20220818063001/CairoOverpassASBR.jpg/1000px-CairoOverpassASBR.jpg');
+
+    color: var(--villain-text);
+
+}
+
+/* Imagem do Dio Brando - Parte 1 */
+body.body-dio-brando .imagem.dio-brando img {
+    width: 100%;
+
+    height: 1000px;
+    object-fit: contain;
+}
+
+.informacoes.dio,
+
+.habilidades.dio,
+
+.historia.dio {
+
+    background-color: var(--villain-panel);
+
+    color: var(--villain-text);
+
+    border: 2px solid var(--villain-gold);
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    margin-bottom: 16px;
+
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+
+}
+
+.texto.dio h2 {
+
+    color: var(--villain-gold);
+
+}
+
+body:has(.imagem.dio) #botao-wryyy {
+
+    background: linear-gradient(135deg, var(--villain-panel), var(--villain-accent));
+
+    color: var(--villain-text);
+
+    border: 2px solid var(--villain-gold);
+
+    border-radius: 12px;
+
+    padding: 12px 24px;
+
+    font-family: 'Noto Sans JP', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 12px color-mix(in srgb, var(--villain-gold) 35%, transparent);
+
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+
+}
+
+body:has(.imagem.dio) #botao-wryyy:hover {
+
+    filter: brightness(1.12);
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 18px color-mix(in srgb, var(--villain-gold) 60%, transparent);
+
+}
+
+body:has(.imagem.dio) #botao-wryyy:active {
+
+    transform: scale(0.96);
+
+}
+
+.imagem.dio img {
+
+    max-width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+.imagem.dio .imagem-fallback {
+
+    display: none;
+
+    min-height: 280px;
+
+    padding: 24px;
+
+    place-items: center;
+
+    text-align: center;
+
+    border: 2px dashed var(--villain-accent);
+
+    border-radius: 12px;
+
+    color: var(--villain-text);
+
+}
+
+body.body-diavolo {
+
+    --villain-bg: #280E19;
+
+    --villain-panel: #721E36;
+
+    --villain-accent: #D65372;
+
+    --villain-gold: #E9B5A9;
+
+    --villain-text: #F6EAF0;
+
+    --villain-shadow: #13070D;
+
+    background-image: url('https://jojocomparisons.github.io/images/VA32/bd-15350-1090px.jpg');
+
+    color: var(--villain-text);
+
+}
+
+.informacoes.diavolo,
+
+.habilidades.diavolo,
+
+.historia.diavolo {
+
+    background-color: var(--villain-panel);
+
+    color: var(--villain-text);
+
+    border: 2px solid var(--villain-gold);
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    margin-bottom: 16px;
+
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+
+}
+
+.texto.diavolo h2 {
+
+    color: var(--villain-gold);
+
+}
+
+#botao-diavolo {
+
+    background: linear-gradient(135deg, var(--villain-panel), var(--villain-accent));
+
+    color: var(--villain-text);
+
+    border: 2px solid var(--villain-gold);
+
+    border-radius: 12px;
+
+    padding: 12px 24px;
+
+    font-family: 'Noto Sans JP', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 12px color-mix(in srgb, var(--villain-gold) 35%, transparent);
+
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+
+}
+
+#botao-diavolo:hover {
+
+    filter: brightness(1.12);
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 18px color-mix(in srgb, var(--villain-gold) 60%, transparent);
+
+}
+
+#botao-diavolo:active {
+
+    transform: scale(0.96);
+
+}
+
+.imagem.diavolo img {
+
+    max-width: 100%;
+
+    height: 1000px;
+
+    object-fit: contain;
+
+}
+
+.imagem.diavolo .imagem-fallback {
+
+    display: none;
+
+    min-height: 280px;
+
+    padding: 24px;
+
+    place-items: center;
+
+    text-align: center;
+
+    border: 2px dashed var(--villain-accent);
+
+    border-radius: 12px;
+
+    color: var(--villain-text);
+
+}
+
+body:has(.imagem.dio-brando) {
+
+    --villain-bg: #211D2B;
+
+    --villain-panel: #382B43;
+
+    --villain-accent: #9C7AB8;
+
+    --villain-gold: #D8B65C;
+
+    --villain-text: #F3EAF6;
+
+    --villain-shadow: #120F18;
+
+    background-color: var(--villain-bg);
+
+    color: var(--villain-text);
+
+}
+
+.informacoes.dio-brando,
+
+.habilidades.dio-brando,
+
+.historia.dio-brando {
+
+    background-color: var(--villain-panel);
+
+    color: var(--villain-text);
+
+    border: 2px solid var(--villain-gold);
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    margin-bottom: 16px;
+
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+
+}
+
+.texto.dio-brando h2 {
+
+    color: var(--villain-gold);
+
+}
+
+body:has(.imagem.dio-brando) #botao-wryyy {
+
+    background: linear-gradient(135deg, var(--villain-panel), var(--villain-accent));
+
+    color: var(--villain-text);
+
+    border: 2px solid var(--villain-gold);
+
+    border-radius: 12px;
+
+    padding: 12px 24px;
+
+    font-family: 'Noto Sans JP', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 12px color-mix(in srgb, var(--villain-gold) 35%, transparent);
+
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+
+}
+
+body:has(.imagem.dio-brando) #botao-wryyy:hover {
+
+    filter: brightness(1.12);
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 18px color-mix(in srgb, var(--villain-gold) 60%, transparent);
+
+}
+
+body:has(.imagem.dio-brando) #botao-wryyy:active {
+
+    transform: scale(0.96);
+
+}
+
+.imagem.dio-brando img {
+
+    max-width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+.imagem.dio-brando .imagem-fallback {
+
+    display: none;
+
+    min-height: 280px;
+
+    padding: 24px;
+
+    place-items: center;
+
+    text-align: center;
+
+    border: 2px dashed var(--villain-accent);
+
+    border-radius: 12px;
+
+    color: var(--villain-text);
+
+}
+
+body.body-enrico-pucci {
+
+    --villain-bg: #080808;
+
+    --villain-panel: #252525;
+
+    --villain-accent: #C9A646;
+
+    --villain-gold: #D4AF37;
+
+    --villain-text: #F2F0E8;
+
+    --villain-shadow: #000000;
+
+    background-image: url('https://m.media-amazon.com/images/M/MV5BNGQ4M2I2OGYtMmNmOC00ZmViLTlhMjMtNWVhOGNlODE5MzYzXkEyXkFqcGc@._V1_.jpg');
+
+    background-color: var(--villain-bg);
+
+    color: var(--villain-text);
+
+}
+
+.informacoes.enrico-pucci,
+
+.habilidades.enrico-pucci,
+
+.historia.enrico-pucci {
+
+    background-color: var(--villain-panel);
+
+    color: var(--villain-text);
+
+    border: 2px solid var(--villain-gold);
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    margin-bottom: 16px;
+
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.35);
+
+}
+
+.texto.enrico-pucci h2 {
+
+    color: var(--villain-gold);
+
+}
+
+#botao-enrico-pucci {
+
+    background: linear-gradient(135deg, var(--villain-panel), var(--villain-accent));
+
+    color: #FFFFFF;
+
+    border: 2px solid var(--villain-gold);
+
+    border-radius: 12px;
+
+    padding: 12px 24px;
+
+    font-family: 'Noto Sans JP', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 12px color-mix(in srgb, var(--villain-gold) 35%, transparent);
+
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+
+}
+
+#botao-enrico-pucci:hover {
+
+    filter: brightness(1.15);
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 18px color-mix(in srgb, var(--villain-gold) 60%, transparent);
+
+}
+
+#botao-enrico-pucci:active {
+
+    transform: scale(0.96);
+
+}
+
+.imagem.enrico-pucci img {
+
+    max-width: 100%;
+
+    height: 1000px;
+
+    object-fit: contain;
+
+}
+
+.imagem.enrico-pucci .imagem-fallback {
+
+    display: none;
+
+    min-height: 280px;
+
+    padding: 24px;
+
+    place-items: center;
+
+    text-align: center;
+
+    border: 2px dashed var(--villain-accent);
+
+    border-radius: 12px;
+
+    color: var(--villain-text);
+
+}
+
+body.body-funny-valentine {
+
+    --villain-bg: #252033;
+
+    --villain-panel: #49354F;
+
+    --villain-accent: #A96F91;
+
+    --villain-gold: #E6B8CD;
+
+    --villain-text: #F5EAF0;
+
+    --villain-shadow: #15111D;
+
+    background-image: url('https://i.postimg.cc/7YGQGg0D/Gemini-Generated-Image-ia2bxuia2bxuia2b.jpg');
+
+    color: var(--villain-text);
+
+}
+
+.informacoes.funny-valentine,
+
+.habilidades.funny-valentine,
+
+.historia.funny-valentine {
+
+    background-color: var(--villain-panel);
+
+    color: var(--villain-text);
+
+    border: 2px solid var(--villain-gold);
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    margin-bottom: 16px;
+
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+
+}
+
+.texto.funny-valentine h2 {
+
+    color: var(--villain-gold);
+
+}
+
+#botao-funny-valentine {
+
+    background: linear-gradient(135deg, var(--villain-panel), var(--villain-accent));
+
+    color: var(--villain-text);
+
+    border: 2px solid var(--villain-gold);
+
+    border-radius: 12px;
+
+    padding: 12px 24px;
+
+    font-family: 'Noto Sans JP', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 12px color-mix(in srgb, var(--villain-gold) 35%, transparent);
+
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+
+}
+
+#botao-funny-valentine:hover {
+
+    filter: brightness(1.12);
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 18px color-mix(in srgb, var(--villain-gold) 60%, transparent);
+
+}
+
+#botao-funny-valentine:active {
+
+    transform: scale(0.96);
+
+}
+
+.imagem.funny-valentine img {
+
+    max-width: 100%;
+
+    height: 1000px;
+
+    object-fit: contain;
+
+}
+
+.imagem.funny-valentine .imagem-fallback {
+
+    display: none;
+
+    min-height: 280px;
+
+    padding: 24px;
+
+    place-items: center;
+
+    text-align: center;
+
+    border: 2px dashed var(--villain-accent);
+
+    border-radius: 12px;
+
+    color: var(--villain-text);
+}
+
+body.body-yoshikage-kira {
+    --villain-bg: #211D29;
+    --villain-panel: #403448;
+    --villain-accent: #76617D;
+    --villain-gold: #B7A5BD;
+    --villain-text: #F0E8F2;
+    --villain-shadow: #121016;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bca58592-54a0-46c2-a3f4-49461c46526c/dj42f5u-f2a1bee2-1086-4aad-936b-778e8ec4ca92.png/v1/fill/w_1192,h_670,q_70,strp/mmd_jojo_kira_s_house_stage_dl_by_nilli10_dj42f5u-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6Ii9mL2JjYTU4NTkyLTU0YTAtNDZjMi1hM2Y0LTQ5NDYxYzQ2NTI2Yy9kajQyZjV1LWYyYTFiZWUyLTEwODYtNGFhZC05MzZiLTc3OGU4ZWM0Y2E5Mi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.5hIEaWEOsQ18WSdTECBRNu8b5GqqpuF0VmB44vKBKNM');
+    color: var(--villain-text);
+}
+
+.informacoes.yoshikage-kira,
+.habilidades.yoshikage-kira,
+.historia.yoshikage-kira {
+    background-color: var(--villain-panel);
+    color: var(--villain-text);
+    border: 2px solid var(--villain-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.yoshikage-kira h2 {
+    color: var(--villain-gold);
+}
+
+#botao-yoshikage-kira {
+    background: linear-gradient(135deg, var(--villain-panel), var(--villain-accent));
+    color: var(--villain-text);
+    border: 2px solid var(--villain-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--villain-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-yoshikage-kira:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--villain-gold) 60%, transparent);
+
+}
+
+#botao-yoshikage-kira:active {
+    transform: scale(0.96);
+}
+
+.imagem.yoshikage-kira img {
+    max-width: 100%;
+    height: 1000px;
+    object-fit: contain;
+}
+
+.imagem.yoshikage-kira .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--villain-accent);
+    border-radius: 12px;
+    color: var(--villain-text);
+}
+
+ #botao-dio {
+            background: linear-gradient(135deg, var(--villain-panel), var(--villain-accent));
+            color: var(--villain-text);
+            border: 2px solid var(--villain-gold);
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 12px color-mix(in srgb, var(--villain-gold) 35%, transparent);
+            transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+        }
+        #botao-dio:hover {
+            filter: brightness(1.12);
+            transform: scale(1.05);
+            box-shadow: 0 0 18px color-mix(in srgb, var(--villain-gold) 60%, transparent);
+        }
+        #botao-dio:active {
+            transform: scale(0.96);
+        }

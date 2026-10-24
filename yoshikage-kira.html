@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Yoshikage Kira | Vilões de JoJo</title>
+</head>
+
+<body class="body-yoshikage-kira">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem yoshikage-kira">
+            <img src="https://static.wikia.nocookie.net/liga-da-zueira-oficial/images/c/c7/Kira_Yoshikage.webp/revision/latest?cb=20220430232833&path-prefix=pt-br"
+                alt="Yoshikage Kira" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Yoshikage Kira">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Yoshikage Kira.</p>
+            </div>
+
+            <button id="botao-yoshikage-kira" type="button">
+                KILLER QUEEN!
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-yoshikage-kira" preload="auto" src="./audio/killer_queen.mp3"></audio>
+        </section>
+
+        <section class="texto yoshikage-kira">
+            <div class="informacoes yoshikage-kira">
+                <h2>Yoshikage Kira</h2>
+                <p>Idade: 33 anos</p>
+                <p>Aniversário: 30 de janeiro</p>
+                <p>Signo do Zodíaco: Aquário</p>
+                <p>Zodíaco Chinês: Cavalo</p>
+                <p>Profissão: Funcionário de escritório</p>
+                <p>Nacionalidade: Japonesa</p>
+                <p>Altura: 175 cm (aproximadamente)</p>
+                <p>Peso: 65 kg</p>
+                <p>Stand: Killer Queen</p>
+            </div>
+
+            <div class="habilidades yoshikage-kira">
+                <h2>Habilidades</h2>
+                <p>Killer Queen transforma objetos em bombas</p>
+                <p>Sheer Heart Attack: bomba automática que persegue calor</p>
+                <p>Bites the Dust: habilidade ligada a explosões e repetição temporal</p>
+            </div>
+
+            <div class="historia yoshikage-kira">
+                <h2>História</h2>
+                <p>Yoshikage Kira é um assassino que deseja viver uma vida tranquila enquanto esconde seus crimes em
+                    Morioh. Seu Stand, Killer Queen, permite transformar objetos em bombas. Quando Josuke Higashikata e
+                    seus amigos começam a investigar os assassinatos, Kira tenta escapar da descoberta e proteger sua
+                    identidade a qualquer custo.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-yoshikage-kira');
+        const somPersonagem = document.getElementById('som-yoshikage-kira');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-viloes.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>

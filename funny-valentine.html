@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Funny Valentine | Vilões de JoJo</title>
+</head>
+
+<body class="body-funny-valentine">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem funny-valentine">
+            <img src="https://i.redd.it/mlx7eliifbvf1.png" alt="Funny Valentine" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Funny Valentine">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Funny Valentine.</p>
+            </div>
+
+            <button id="botao-funny-valentine" type="button">
+                D4C!
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-funny-valentine" preload="auto" src="./audio/funny_valentine_d4c.mp3"></audio>
+        </section>
+
+        <section class="texto funny-valentine">
+            <div class="informacoes funny-valentine">
+                <h2>Funny Valentine</h2>
+                <p>Idade: Aproximadamente 48 anos</p>
+                <p>Aniversário: Desconhecido</p>
+                <p>Signo do Zodíaco: Desconhecido</p>
+                <p>Zodíaco Chinês: Desconhecido</p>
+                <p>Profissão: Presidente dos Estados Unidos</p>
+                <p>Nacionalidade: Norte-americana</p>
+                <p>Altura: Não informada oficialmente</p>
+                <p>Peso: Não informado oficialmente</p>
+                <p>Stand: Dirty Deeds Done Dirt Cheap (D4C)</p>
+            </div>
+
+            <div class="habilidades funny-valentine">
+                <h2>Habilidades</h2>
+                <p>D4C: atravessa dimensões e mundos paralelos</p>
+                <p>Pode transferir sua existência para uma versão alternativa de si</p>
+                <p>D4C - Love Train redireciona o infortúnio</p>
+            </div>
+
+            <div class="historia funny-valentine">
+                <h2>História</h2>
+                <p>Funny Valentine é o presidente dos Estados Unidos e o verdadeiro mentor da corrida Steel Ball Run.
+                    Ele procura reunir as partes do Cadáver Santo para garantir poder e prosperidade ao seu país. Seu
+                    Stand D4C permite viajar entre mundos paralelos, tornando-se uma ameaça central para Johnny Joestar
+                    e Gyro Zeppeli.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-funny-valentine');
+        const somPersonagem = document.getElementById('som-funny-valentine');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-viloes.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>

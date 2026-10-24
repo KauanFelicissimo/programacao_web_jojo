@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>DIO | Vilões de JoJo</title>
+</head>
+
+<body class="body-dio">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+    <section class="imagem dio">
+        <img
+            src="https://static.wikia.nocookie.net/earthern/images/d/d7/B47fcfe75ace7989bb15352242bd1d0b.png/revision/latest?cb=20231104064116"
+            alt="DIO"
+            loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+        >
+
+        <div class="imagem-fallback" role="img" aria-label="Imagem de DIO">
+            <p>
+                Não foi possível carregar a imagem automaticamente.
+                Substitua o endereço por uma imagem válida de DIO.
+            </p>
+        </div>
+
+        <button id="botao-dio" type="button">
+            ZA WARUDO!
+        </button>
+
+        <audio id="som-dio" preload="auto" src="./audio/za_warudo.mp3"></audio>
+    </section>
+
+    <section class="texto dio">
+        <div class="informacoes dio">
+            <h2>DIO</h2>
+            <p>Idade: Mais de 100 anos</p>
+            <p>Aniversário: Desconhecido</p>
+            <p>Signo do Zodíaco: Desconhecido</p>
+            <p>Zodíaco Chinês: Desconhecido</p>
+            <p>Profissão: Vampiro e líder de seguidores</p>
+            <p>Nacionalidade: Britânica (originalmente)</p>
+            <p>Altura: Aproximadamente 195 cm</p>
+            <p>Peso: Não informado oficialmente</p>
+            <p>Stand: The World</p>
+        </div>
+
+        <div class="habilidades dio">
+            <h2>Habilidades</h2>
+            <p>Força, velocidade e regeneração vampíricas</p>
+            <p>The World: capacidade de parar o tempo</p>
+            <p>Absorção de sangue para recuperar forças</p>
+            <p>Grande habilidade de combate e manipulação</p>
+        </div>
+
+        <div class="historia dio">
+            <h2>História</h2>
+            <p>
+                Após sobreviver aos acontecimentos de Phantom Blood,
+                Dio retorna como DIO, agora com o Stand The World.
+                Instalado no Egito, reúne seguidores e busca consolidar
+                seu poder. Jotaro Kujo e seus aliados atravessam o mundo
+                para enfrentá-lo e impedir que sua influência ameace a
+                família Joestar.
+            </p>
+        </div>
+    </section>
+</main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-dio');
+        const somPersonagem = document.getElementById('som-dio');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-viloes.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Enrico Pucci | Vilões de JoJo</title>
+</head>
+
+<body class="body-enrico-pucci">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem enrico-pucci">
+            <img src="https://static.wikia.nocookie.net/liga-da-zueira-oficial/images/e/e9/Enrico_Pucci_Render.png/revision/latest?cb=20240112093524&path-prefix=pt-br"
+                alt="Enrico Pucci" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Enrico Pucci">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Enrico Pucci.</p>
+            </div>
+
+            <button id="botao-enrico-pucci" type="button">
+                MADE IN HEAVEN!
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-enrico-pucci" preload="auto" src="./audio/made_in_heaven.mp3"></audio>
+        </section>
+
+        <section class="texto enrico-pucci">
+            <div class="informacoes enrico-pucci">
+                <h2>Enrico Pucci</h2>
+                <p>Idade: 39 anos</p>
+                <p>Aniversário: 5 de junho</p>
+                <p>Signo do Zodíaco: Gêmeos</p>
+                <p>Zodíaco Chinês: Desconhecido</p>
+                <p>Profissão: Padre e capelão da prisão Green Dolphin Street</p>
+                <p>Nacionalidade: Norte-americana</p>
+                <p>Altura: Não informada oficialmente</p>
+                <p>Peso: Não informado oficialmente</p>
+                <p>Stand: Whitesnake, C-Moon e Made in Heaven</p>
+            </div>
+
+            <div class="habilidades enrico-pucci">
+                <h2>Habilidades</h2>
+                <p>Whitesnake: extrai discos de memória e Stand</p>
+                <p>C-Moon: manipula a gravidade em torno de si</p>
+                <p>Made in Heaven: acelera o fluxo do tempo</p>
+            </div>
+
+            <div class="historia enrico-pucci">
+                <h2>História</h2>
+                <p>Enrico Pucci é um sacerdote que acredita estar destinado a alcançar o paraíso seguindo os planos de
+                    DIO. Na prisão Green Dolphin Street, manipula acontecimentos para reunir os elementos necessários ao
+                    seu objetivo. Jolyne Cujoh e seus aliados tentam detê-lo antes que ele use o poder de seu Stand para
+                    alterar o destino de toda a humanidade.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-enrico-pucci');
+        const somPersonagem = document.getElementById('som-enrico-pucci');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-viloes.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>
