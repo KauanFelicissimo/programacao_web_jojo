@@ -288,11 +288,11 @@ body.body-dio {
 .stand.bruno {
     position: absolute;
 
-    top: 25%;
-    left: 20%;
+    top: 18%;
+    left: 42%;
 
     width: 600px;
-    height: 900px;
+    height: 700px;
 
     z-index: -1;
 
