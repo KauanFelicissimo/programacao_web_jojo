@@ -22,6 +22,8 @@
                     Substitua o endereço no atributo <code>src</code> por uma imagem válida de Ermes Costello.</p>
             </div>
 
+            <section class="stand ermes" data-image-src="./fundo/stand-ermes.png" aria-label="Stand Kiss"></section>
+
             <button id="botao-ermes" type="button">
                 💋OSHAAAAAAA!
             </button>
@@ -59,8 +61,13 @@
     <script>
         const botaoSom = document.getElementById('botao-ermes');
         const somPersonagem = document.getElementById('som-ermes');
+        const stand = document.querySelector('.stand.ermes');
 
         botaoSom.addEventListener('click', async () => {
+            if (!stand.querySelector('img')) {
+                stand.innerHTML = '<img src="https://static.wikia.nocookie.net/jjba/images/d/d9/KissFullbodyAnime.png/revision/latest?cb=20211109102057" alt="Stand The World" width="400" height="700">';
+            }
+
             try {
                 somPersonagem.currentTime = 0;
                 await somPersonagem.play();

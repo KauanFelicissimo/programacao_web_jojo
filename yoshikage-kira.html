@@ -17,6 +17,9 @@
             <img src="https://static.wikia.nocookie.net/liga-da-zueira-oficial/images/c/c7/Kira_Yoshikage.webp/revision/latest?cb=20220430232833&path-prefix=pt-br"
                 alt="Yoshikage Kira" loading="lazy"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <section class="stand yoshikage-kira">
+                <!-- espaço vazio para o stand do dio-->
+            </section>
             <div class="imagem-fallback" role="img" aria-label="Imagem de Yoshikage Kira">
                 <p>Não foi possível carregar a imagem automaticamente.<br>
                     Substitua o endereço no atributo <code>src</code> por uma imagem válida de Yoshikage Kira.</p>
@@ -64,8 +67,12 @@
     <script>
         const botaoSom = document.getElementById('botao-yoshikage-kira');
         const somPersonagem = document.getElementById('som-yoshikage-kira');
+        const stand = document.querySelector('.stand.yoshikage-kira');
 
         botaoSom.addEventListener('click', async () => {
+            if (!stand.querySelector('img')) {
+                stand.innerHTML = '<img src="https://static.wikia.nocookie.net/jojo/images/6/6e/Killerqueenanime.png/revision/latest?cb=20190508190443&path-prefix=pl" alt="Stand The World" width="400" height="400">';
+            }
             try {
                 somPersonagem.currentTime = 0;
                 await somPersonagem.play();

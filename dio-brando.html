@@ -13,6 +13,10 @@
     <div id="sidebar-placeholder"></div>
 
     <main class="conteudo">
+
+    
+
+    
     <section class="imagem dio">
         <img
             src="https://static.wikia.nocookie.net/earthern/images/d/d7/B47fcfe75ace7989bb15352242bd1d0b.png/revision/latest?cb=20231104064116"
@@ -20,6 +24,10 @@
             loading="lazy"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
         >
+
+        <section class="stand dio-brando">
+         <!-- espaço vazio para o stand do dio-->
+        </section>
 
         <div class="imagem-fallback" role="img" aria-label="Imagem de DIO">
             <p>
@@ -74,8 +82,13 @@
     <script>
         const botaoSom = document.getElementById('botao-dio');
         const somPersonagem = document.getElementById('som-dio');
+        const stand = document.querySelector('.stand.dio-brando');
 
         botaoSom.addEventListener('click', async () => {
+            if (!stand.querySelector('img')) {
+                stand.innerHTML = '<img src="https://static.wikia.nocookie.net/jjba/images/e/e5/The_world_c2532.png/revision/latest/scale-to-width/360?cb=20170423132439&path-prefix=pt-br" alt="Stand The World" width="400" height="400">';
+            }
+
             try {
                 somPersonagem.currentTime = 0;
                 await somPersonagem.play();

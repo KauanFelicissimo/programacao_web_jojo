@@ -22,6 +22,8 @@
                     Substitua o endereço no atributo <code>src</code> por uma imagem válida de Josuke Higashikata.</p>
             </div>
 
+            <section class="stand josuke" data-image-src="./fundo/stand-josuke.png" aria-label="Stand Crazy Diamond"></section>
+
             <button id="botao-josuke" type="button">
                 💎 CRAZY DIAMOND!!
             </button>
@@ -61,8 +63,13 @@
     <script>
         const botaoSom = document.getElementById('botao-josuke');
         const somPersonagem = document.getElementById('som-josuke');
+        const stand = document.querySelector('.stand.josuke');
 
         botaoSom.addEventListener('click', async () => {
+            if (!stand.querySelector('img')) {
+                stand.innerHTML = '<img src="https://static.wikia.nocookie.net/jjba/images/4/44/CrazyDiamond_ASB.png/revision/latest/scale-to-width-down/250?cb=20150222043844&path-prefix=pt-br" alt="Stand The World" >';
+            }
+
             try {
                 somPersonagem.currentTime = 0;
                 await somPersonagem.play();

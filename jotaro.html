@@ -22,6 +22,8 @@
                     Substitua o endereço no atributo <code>src</code> por uma imagem válida de Jotaro Kujo.</p>
             </div>
 
+            <section class="stand jotaro" data-image-src="./fundo/stand-jotaro.png" aria-label="Stand Star Platinum"></section>
+
             <button id="botao-jotaro" type="button">
                 ★ STAR PLATINUM ZA WARUDO!!
             </button>
@@ -62,8 +64,13 @@
     <script>
         const botaoSom = document.getElementById('botao-jotaro');
         const somPersonagem = document.getElementById('som-jotaro');
+        const stand = document.querySelector('.stand.jotaro');
 
         botaoSom.addEventListener('click', async () => {
+            if (!stand.querySelector('img')) {
+                stand.innerHTML = '<img src="https://api.triviacreator.com/v1/imgs/quiz/SP_P6_Anime-15567300-ed98-41d1-b987-3f33c8ab0e95.webp" alt="Stand The World" >';
+            }
+
             try {
                 somPersonagem.currentTime = 0;
                 await somPersonagem.play();

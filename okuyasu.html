@@ -22,6 +22,8 @@
                     Substitua o endereço no atributo <code>src</code> por uma imagem válida de Okuyasu Nijimura.</p>
             </div>
 
+            <section class="stand okuyasu" data-image-src="./fundo/stand-okuyasu.png" aria-label="Stand The Hand"></section>
+
             <button id="botao-okuyasu" type="button">
                 🫱ZA HANDO GA KESU!
             </button>
@@ -60,8 +62,13 @@
     <script>
         const botaoSom = document.getElementById('botao-okuyasu');
         const somPersonagem = document.getElementById('som-okuyasu');
+        const stand = document.querySelector('.stand.okuyasu');
 
         botaoSom.addEventListener('click', async () => {
+            if (!stand.querySelector('img')) {
+                stand.innerHTML = '<img src="https://static.wikia.nocookie.net/vsbattles/images/f/f7/OraDoraTheHand.png/revision/latest/scale-to-width-down/280?cb=20260819110615" alt="Stand The World" >';
+            }
+
             try {
                 somPersonagem.currentTime = 0;
                 await somPersonagem.play();

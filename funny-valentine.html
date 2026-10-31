@@ -21,6 +21,8 @@
                     Substitua o endereço no atributo <code>src</code> por uma imagem válida de Funny Valentine.</p>
             </div>
 
+            <section class="stand funny-valentine" data-image-src="./fundo/stand-funny-valentine.png" aria-label="Stand D4C"></section>
+
             <button id="botao-funny-valentine" type="button">
                 D4C!
             </button>
@@ -63,8 +65,13 @@
     <script>
         const botaoSom = document.getElementById('botao-funny-valentine');
         const somPersonagem = document.getElementById('som-funny-valentine');
+        const stand = document.querySelector('.stand.funny-valentine');
 
         botaoSom.addEventListener('click', async () => {
+            if (!stand.querySelector('img')) {
+                stand.innerHTML = '<img src="https://static.wikia.nocookie.net/jojos-bizzare-fanon/images/e/e3/D4C.png/revision/latest?cb=20161220210721" alt="Stand The World" width="400" height="700">';
+            }
+
             try {
                 somPersonagem.currentTime = 0;
                 await somPersonagem.play();

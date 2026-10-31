@@ -211,6 +211,164 @@ body.body-dio {
 
 }
 
+.imagem .stand {
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    width: 400px;
+    height: 600px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.conteudo .imagem .stand img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: contain;
+}
+
+.stand.dio-brando {
+    position: absolute;
+
+    top: 10%;
+    left: 45%;
+
+    width: 350px;
+    height: 700px;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+.stand.johnny {
+    position: absolute;
+
+    top: 40%;
+    left: 30%;
+
+    width: 900px;
+    height: 700px;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+.stand.yoshikage-kira {
+    position: absolute;
+
+    top: 15%;
+    left: 40%;
+
+    width: 600px;
+    height: 900px;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+.stand.diavolo {
+    position: absolute;
+
+    top: 10%;
+    left: 40%;
+
+    width: 600px;
+    height: 900px;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+.stand.bruno {
+    position: absolute;
+
+    top: 25%;
+    left: 20%;
+
+    width: 600px;
+    height: 900px;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+.stand.enrico-pucci {
+    position: absolute;
+
+    top: 15%;
+    left: 45%;
+
+    width: 500px;
+    height: 900px;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+.stand.ermes {
+    position: absolute;
+
+    top: 10%;
+    left: 35%;
+
+    width: 900px;
+    height: 1000px;
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+.stand.funny-valentine {
+    position: absolute;
+
+    top: -10%;
+    left: 37%;
+
+    width: 600px;
+    height: 1000px;
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+.stand.jolyne {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 900px;
+    height: 1100px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.stand.josuke {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 900px;
+    height: 800px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.stand.okuyasu {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 900px;
+    height: 800px;
+    z-index: -1;
+    pointer-events: none;
+}
+
 /* Segundo bloco */
 
 .habilidades {
@@ -2168,6 +2326,7 @@ body.body-ermes {
 }
 
 .imagem.ermes .imagem-fallback {
+    position: relative;
     display: none;
     min-height: 280px;
     padding: 24px;

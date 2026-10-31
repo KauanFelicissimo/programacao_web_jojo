@@ -22,6 +22,8 @@
                     Substitua o endereço no atributo <code>src</code> por uma imagem válida de Jean Pierre Polnareff.</p>
             </div>
 
+            <section class="stand jean" data-image-src="./fundo/stand-jean.png" aria-label="Stand Silver Chariot"></section>
+
             <button id="botao-jean" type="button">
                 ⚔️SILVER CHARIOT!
             </button>
@@ -60,8 +62,22 @@
     <script>
         const botaoSom = document.getElementById('botao-jean');
         const somPersonagem = document.getElementById('som-jean');
+        const stand = document.querySelector('.stand.jean');
 
         botaoSom.addEventListener('click', async () => {
+            if (!stand.querySelector('img')) {
+                const imagemStand = document.createElement('img');
+                imagemStand.src = stand.dataset.imageSrc;
+                imagemStand.alt = 'Stand Silver Chariot';
+                imagemStand.width = 400;
+                imagemStand.height = 400;
+                imagemStand.addEventListener('error', () => {
+                    console.error(`Não foi possível carregar a imagem do Stand: ${imagemStand.src}`);
+                    imagemStand.remove();
+                }, { once: true });
+                stand.appendChild(imagemStand);
+            }
+
             try {
                 somPersonagem.currentTime = 0;
                 await somPersonagem.play();

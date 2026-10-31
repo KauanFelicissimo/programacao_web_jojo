@@ -14,6 +14,9 @@
 
     <main class="conteudo">
         <section class="imagem diavolo">
+            <section class="stand diavolo">
+                <!-- espaço vazio para o stand do dio-->
+            </section>
             <img src="https://static.wikia.nocookie.net/viloes/images/8/8d/Diavolo-Render.webp/revision/latest?cb=20250618035004&path-prefix=pt-br"
                 alt="Diavolo" loading="lazy"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
@@ -63,8 +66,12 @@
     <script>
         const botaoSom = document.getElementById('botao-diavolo');
         const somPersonagem = document.getElementById('som-diavolo');
+        const stand = document.querySelector('.stand.diavolo');
 
         botaoSom.addEventListener('click', async () => {
+            if (!stand.querySelector('img')) {
+                stand.innerHTML = '<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7a5b5c67-dee6-456b-863b-75930852c715/dhn5r3i-52203c36-f9e7-45bf-9ecb-5e944744d29a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi83YTViNWM2Ny1kZWU2LTQ1NmItODYzYi03NTkzMDg1MmM3MTUvZGhuNXIzaS01MjIwM2MzNi1mOWU3LTQ1YmYtOWVjYi01ZTk0NDc0NGQyOWEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ax24ua4DYGrJTm_pGW-s0gb8egcp5brQ9c0YfujRJIM" alt="Stand The World" width="400" height="400">';
+            }
             try {
                 somPersonagem.currentTime = 0;
                 await somPersonagem.play();

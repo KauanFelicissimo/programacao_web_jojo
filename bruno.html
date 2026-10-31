@@ -22,6 +22,8 @@
                     Substitua o endereço no atributo <code>src</code> por uma imagem válida de Bruno Bucciarati.</p>
             </div>
 
+            <section class="stand bruno" data-image-src="./fundo/stand-bruno.png" aria-label="Stand Sticky Fingers"></section>
+
             <button id="botao-bruno" type="button">
                 👊STICKY FINGERS!
             </button>
@@ -62,8 +64,13 @@ Bucciarati também é um usuário de Stand que usa Sticky Fingers em batalha.</p
     <script>
         const botaoSom = document.getElementById('botao-bruno');
         const somPersonagem = document.getElementById('som-bruno');
+        const stand = document.querySelector('.stand.bruno');
 
         botaoSom.addEventListener('click', async () => {
+            if (!stand.querySelector('img')) {
+                stand.innerHTML = '<img src="https://i.redd.it/r21ag6duy4zf1.png" alt="Stand The World" width="400" height="400">';
+            }
+
             try {
                 somPersonagem.currentTime = 0;
                 await somPersonagem.play();

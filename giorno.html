@@ -22,6 +22,8 @@
                     Substitua o endereço no atributo <code>src</code> por uma imagem válida de Giorno Giovanna.</p>
             </div>
 
+            <section class="stand giorno" data-image-src="./fundo/stand-giorno.png" aria-label="Stand Gold Experience"></section>
+
             <button id="botao-giorno" type="button">
                 🍃 GOLD EXPERIENCE!!
             </button>
@@ -59,8 +61,11 @@
     <script>
         const botaoSom = document.getElementById('botao-giorno');
         const somPersonagem = document.getElementById('som-giorno');
+        const stand = document.querySelector('.stand.giorno');
 
         botaoSom.addEventListener('click', async () => {
+        
+
             try {
                 somPersonagem.currentTime = 0;
                 await somPersonagem.play();
