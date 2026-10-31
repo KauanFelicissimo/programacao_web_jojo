@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Bruno Bucciarati | Jobros</title>
+</head>
+
+<body class="body-bruno">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem bruno">
+            <img src="https://static.wikia.nocookie.net/near-pure-good-hero/images/a/a2/Bucciarati_JOJOWORLD2.png/revision/latest?cb=20240516121357"
+                alt="Bruno Bucciarati" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Bruno Bucciarati">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Bruno Bucciarati.</p>
+            </div>
+
+            <button id="botao-bruno" type="button">
+                👊STICKY FINGERS!
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-bruno" preload="auto" src="./audio/stickyFingers.mp3"></audio>
+        </section>
+
+        <section class="texto bruno">
+            <div class="informacoes bruno">
+                <h2>Bruno Bucciarati</h2>
+                <p>Idade: 20 anos</p>
+                <p>Aniversário: 27 de Setembro de 1980</p>
+                <p>Signo do Zodíaco: Libra</p>
+                <p>Zodíaco Chinês: Macaco</p>
+                <p>Ocupação: Gangstar</p>
+                <p>Nacionalidade: Italiano</p>
+                <p>Altura: 185 cm</p>
+                <p>Peso: 73 kg</p>
+            </div>
+
+            <div class="habilidades bruno">
+                <h2>Habilidades</h2>
+                <p>Stand</p>
+                <p>O Stand Sticky Fingers de Bucciarati permite que ele crie zíperes em qualquer objeto ou superfície sólida, incluindo suas próprias partes do corpo.</p>
+                <p>Bucciarati é um lutador notável em uma luta Stand; tendo dominado o poder versátil de Sticky Fingers, ele pode facilmente usar o ambiente a seu favor, conter seus inimigos, escapar rapidamente de ataques recebidos e atacar de pontos cegos. Sua abnegação natural significa que a sobrevivência não está entre suas prioridades, portanto, suas ações surpreenderão facilmente seus oponentes.</p>
+            </div>
+
+            <div class="historia bruno">
+                <h2>História</h2>
+                <p>Ele é um mafioso e líder de seu próprio esquadrão dentro da poderosa gangue napolitana, Passione. Enviado para rastrear quem atacou Leaky-Eye Luca e estreando como  oponente de Giorno Giovanna, Bucciarati se torna o primeiro a dar apoio significativo a Giorno em sua ascensão nas fileiras de Passione.
+
+Bucciarati também é um usuário de Stand que usa Sticky Fingers em batalha.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-bruno');
+        const somPersonagem = document.getElementById('som-bruno');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-jobros.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Okuyasu Nijimura | Jobros</title>
+</head>
+
+<body class="body-okuyasu">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem okuyasu">
+            <img src="https://static.wikia.nocookie.net/p__/images/c/cf/Okuyasu-JoJoOraDora.png/revision/latest?cb=20260928114033&path-prefix=protagonist"
+                alt="Okuyasu Nijimura" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Okuyasu Nijimura">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Okuyasu Nijimura.</p>
+            </div>
+
+            <button id="botao-okuyasu" type="button">
+                🫱ZA HANDO GA KESU!
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-okuyasu" preload="auto" src="./audio/zahando.m4a"></audio>
+        </section>
+
+        <section class="texto okuyasu">
+            <div class="informacoes okuyasu">
+                <h2>Okuyasu Nijimura</h2>
+                <p>Idade: 16 anos</p>
+                <p>Aniversário: 27 de setembro de 1983</p>
+                <p>Signo do Zodíaco: Libra</p>
+                <p>Zodíaco Chinês: Porco</p>
+                <p>Ocupação: Estudante</p>
+                <p>Nacionalidade: Japonês</p>
+                <p>Altura: 178 cm</p>
+                <p>Peso: 80 kg</p>
+            </div>
+
+            <div class="habilidades okuyasu">
+                <h2>Habilidades</h2>
+                <p>Stand</p>
+                <p>O Stand de Okuyasu , The Hand, "corta" ou "raspa" o espaço e o substitui por um espaço vizinho redistribuído, ou simplesmente o erradica.</p>
+                <p>Embora The Hand seja um Stand altamente poderoso, a inteligência lenta de Okuyasu faz com que seu potencial não seja realizado. Caso em questão, sua primeira luta faz com que ele se nocauteie ao teletransportar por engano vasos de flores em seu rosto.</p>
+            </div>
+
+            <div class="historia okuyasu">
+                <h2>História</h2>
+                <p>Apresentado como um antagonista, Okuyasu logo se torna o melhor amigo de Josuke Higashikata. Eles permanecem amigos íntimos durante a Parte 4 e enfrentam usuários malévolos do Stand juntos. Ele também é o irmão mais novo de Keicho Nijimura e também um usuário de Stand empunhando o temível " The Hand ".</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-okuyasu');
+        const somPersonagem = document.getElementById('som-okuyasu');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-jobros.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>

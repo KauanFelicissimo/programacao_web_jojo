@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Jean Pierre Polnareff  | Jobros</title>
+</head>
+
+<body class="body-jean">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem jean">
+            <img src="./fundo/jean.webp"
+                alt="Jean Pierre Polnareff" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Jean Pierre Polnareff">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Jean Pierre Polnareff.</p>
+            </div>
+
+            <button id="botao-jean" type="button">
+                ⚔️SILVER CHARIOT!
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-jean" preload="auto" src="./audio/chariot.mp3"></audio>
+        </section>
+
+        <section class="texto jean">
+            <div class="informacoes jean">
+                <h2>Jean Pierre Polnareff</h2>
+                <p>Idade: 23 anos</p>
+                <p>Aniversário: 30 de novembro de 1965</p>
+                <p>Signo do Zodíaco: Sagitário</p>
+                <p>Zodíaco Chinês: Serpente</p>
+                <p>Ocupação: Desconhecido</p>
+                <p>Nacionalidade: Francês</p>
+                <p>Altura: 185 cm</p>
+                <p>Peso: 95 kg</p>
+            </div>
+
+            <div class="habilidades jean">
+                <h2>Habilidades</h2>
+                <p>Stand</p>
+                <p>O Stand humanóide de Polnareff é Silver Chariot, um dos mais rápidos de todos; utilizando um florete em um ataque flexível e mortal.</p>
+                <p>Tendo nascido com Silver Chariot, Polnareff afirma ter treinado intensamente com seu Stand, com ótimos resultados. Graças ao seu treinamento, Polnareff é capaz de empunhar habilmente o Silver Chariot e fazê-lo lutar com a perícia de um espadachim experiente, capaz de comandá-lo para cortar ou esfaquear com grande precisão e tempo. Embora a espada seja sua principal característica, Polnareff também pode comandar seu Stand para executar chutes em uma pitada.</p>
+            </div>
+
+            <div class="historia jean">
+                <h2>História</h2>
+                <p>Em Stardust Crusaders, o francês Polnareff inicialmente aparece como um lacaio de DIO sendo controlado com um esporo de carne. Ele viaja com o Grupo Joestar para vingar sua irmã Sherry, que foi assassinada por um homem com duas mãos direitas. Em Vento Aureo, Polnareff reaparece para ajudar a Equipe Bucciarati rebelde em sua busca para derrotar o chefe da gangue italiana Passione.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-jean');
+        const somPersonagem = document.getElementById('som-jean');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-jobros.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>

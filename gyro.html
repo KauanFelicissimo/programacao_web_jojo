@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Gyro Zeppeli | Jobros</title>
+</head>
+
+<body class="body-gyro">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem gyro">
+            <img src="https://static.wikia.nocookie.net/near-pure-good-hero/images/2/29/Gyro_anime.webp/revision/latest?cb=20260218174738"
+                alt="Gyro Zeppeli" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Gyro Zeppeli">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Gyro Zeppeli.</p>
+            </div>
+
+            <button id="botao-gyro" type="button">
+                🍕Pizza Mozzarella
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-gyro" preload="auto" src="./audio/mozzarella.mp3"></audio>
+        </section>
+
+        <section class="texto gyro">
+            <div class="informacoes gyro">
+                <h2>Gyro Zeppeli</h2>
+                <p>Idade: 24 anos</p>
+                <p>Cavalo: Valkyrie</p>
+                <p>Aniversário: Desconhecido</p>
+                <p>Signo do Zodíaco: Desconhecido</p>
+                <p>Zodíaco Chinês: Desconhecido</p>
+                <p>Ocupação: Carrasco</p>
+                <p>Nacionalidade: Italiano</p>
+                <p>Altura: Desconhecido</p>
+                <p>Peso: Desconhecido</p>
+            </div>
+
+            <div class="habilidades gyro">
+                <h2>Habilidades</h2>
+                <p>Spin</p>
+                <p>A técnica Spin da família Zeppeli, geralmente aplicada com Steel Balls especiais, é uma habilidade versátil em que Gyro foi treinado desde a juventude. Gyro se equipa com duas Steel Balls como meio de autodefesa, ataque e vantagem estratégica geral. Jogando suas Steel Balls com o Spin, Gyro pode criar uma variedade de trajetórias impressionantes, podendo até mesmo fazer com que elas retornem diretamente para ele, principalmente após um contato bem-sucedido com seu alvo.</p>
+            </div>
+
+            <div class="historia gyro">
+                <h2>História</h2>
+                <p>Gyro é um mestre do Spin vindo do Reino de Nápoles . Ele se junta à corrida Steel Ball Run para ganhar anistia para uma criança que ele foi designado para executar. Seu domínio do Spin mais tarde permite que ele acesse o Ball Breaker.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-gyro');
+        const somPersonagem = document.getElementById('som-gyro');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-jobros.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>

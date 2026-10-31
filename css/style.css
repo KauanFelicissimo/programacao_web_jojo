@@ -20,6 +20,8 @@ body {
 
     font-family: 'Noto Sans JP', sans-serif;
 
+    zoom: 0.8;
+
 }
 
 body.body-dio {
@@ -1776,4 +1778,486 @@ body.body-will {
 
 /* Will a Zeppeli */
 
-/* Jovros */
+
+/* Caesar Anthonio Zeppeli */
+
+body.body-caeser {
+            --jojo-bg: #171827;
+            --jojo-panel: #F2F2F2;
+            --jojo-accent: #79A6C6;
+            --jojo-gold: #9256AB;
+            --jojo-text: #232526;
+            --jojo-shadow: #100F19;
+            background-color: var(--jojo-bg);
+            background-image: url('https://jojocomparisons.github.io/images/BT22/bd-00050-1090px.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--jojo-text);
+        }
+
+.informacoes.caeser,
+.habilidades.caeser,
+.historia.caeser {
+    background-color: var(--jojo-panel);
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.caeser h2 {
+    color: var(--jojo-accent);
+}
+
+#botao-caeser {
+    background: linear-gradient(135deg, var(--jojo-panel), var(--jojo-accent));
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--jojo-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-caeser:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--jojo-gold) 60%, transparent);
+}
+
+#botao-caeser:active {
+    transform: scale(0.96);
+}
+
+.imagem.caeser img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.imagem.caeser .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--jojo-accent);
+    border-radius: 12px;
+    color: var(--jojo-text);
+}
+
+/* Caesar Anthonio Zeppeli */
+
+/* Jean Pierre Polnareff */
+
+body.body-jean {
+            --jojo-bg: #171827;
+            --jojo-panel: #F2F2F2;
+            --jojo-accent: #000105;
+            --jojo-gold: #C4C4C4;
+            --jojo-text: #232526;
+            --jojo-shadow: #100F19;
+            background-color: var(--jojo-bg);
+            background-image: url('https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/04/Featured-Image-Stardust-Crusaders-Cropped.jpg?w=1600&h=900&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--jojo-text);
+        }
+
+.informacoes.jean,
+.habilidades.jean,
+.historia.jean {
+    background-color: var(--jojo-panel);
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.jean h2 {
+    color: var(--jojo-accent);
+}
+
+#botao-jean {
+    background: linear-gradient(135deg, var(--jojo-panel), var(--jojo-accent));
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--jojo-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-jean:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--jojo-gold) 60%, transparent);
+}
+
+#botao-jean:active {
+    transform: scale(0.96);
+}
+
+.imagem.jean img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.imagem.jean .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--jojo-accent);
+    border-radius: 12px;
+    color: var(--jojo-text);
+}
+
+
+/* Jean Pierre Polnareff */
+
+
+/* Okuyasu Nijimura */
+
+body.body-okuyasu {
+            --jojo-bg: #171827;
+            --jojo-panel: #367297;
+            --jojo-accent: #000105;
+            --jojo-gold: #d3d282;
+            --jojo-text: white;
+            --jojo-shadow: #100F19;
+            background-color: var(--jojo-bg);
+            background-image: url('/fundo/morioh.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--jojo-text);
+        }
+
+.informacoes.okuyasu,
+.habilidades.okuyasu,
+.historia.okuyasu {
+    background-color: var(--jojo-panel);
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.okuyasu h2 {
+    color: var(--jojo-accent);
+}
+
+#botao-okuyasu {
+    background: linear-gradient(135deg, var(--jojo-panel), var(--jojo-accent));
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--jojo-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-okuyasu:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--jojo-gold) 60%, transparent);
+}
+
+#botao-okuyasu:active {
+    transform: scale(0.96);
+}
+
+.imagem.okuyasu img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.imagem.okuyasu .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--jojo-accent);
+    border-radius: 12px;
+    color: var(--jojo-text);
+}
+
+
+
+/* Okuyasu Nijimura */
+
+/* Bruno Bucciarati */
+
+body.body-bruno {
+            --jojo-bg: #171827;
+            --jojo-panel: #f8f9f8;
+            --jojo-accent: #000105;
+            --jojo-gold: #ffe074;
+            --jojo-text: #333042;
+            --jojo-shadow: #100F19;
+            background-color: var(--jojo-bg);
+            background-image: url('https://jojocomparisons.github.io/images/VA20/bd-03710-1090px.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--jojo-text);
+        }
+
+.informacoes.bruno,
+.habilidades.bruno,
+.historia.bruno {
+    background-color: var(--jojo-panel);
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.bruno h2 {
+    color: var(--jojo-accent);
+}
+
+#botao-bruno {
+    background: linear-gradient(135deg, var(--jojo-panel), var(--jojo-accent));
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--jojo-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-bruno:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--jojo-gold) 60%, transparent);
+}
+
+#botao-bruno:active {
+    transform: scale(0.96);
+}
+
+.imagem.bruno img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.imagem.bruno .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--jojo-accent);
+    border-radius: 12px;
+    color: var(--jojo-text);
+}
+
+
+/* Bruno Bucciarati */
+
+
+/* Ermes Costello */
+
+body.body-ermes {
+            --jojo-bg: #171827;
+            --jojo-panel: #0fdc45;
+            --jojo-accent: #E3CB67;
+            --jojo-gold: #D36B39;
+            --jojo-text: #333042;
+            --jojo-shadow: #100F19;
+            background-color: var(--jojo-bg);
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUkoo_QjMUgTAmQtF1Ae2wY5hZn5KrmewLRgTlcewW0oYOO65rUL5OETTm&s=10');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--jojo-text);
+        }
+
+.informacoes.ermes,
+.habilidades.ermes,
+.historia.ermes {
+    background-color: var(--jojo-panel);
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.ermes h2 {
+    color: var(--jojo-accent);
+}
+
+#botao-ermes {
+    background: linear-gradient(135deg, var(--jojo-panel), var(--jojo-accent));
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--jojo-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-ermes:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--jojo-gold) 60%, transparent);
+}
+
+#botao-ermes:active {
+    transform: scale(0.96);
+}
+
+.imagem.ermes img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.imagem.ermes .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--jojo-accent);
+    border-radius: 12px;
+    color: var(--jojo-text);
+}
+
+/* Ermes Costello */
+
+
+/* Gyro Zeppeli */
+
+body.body-gyro {
+            --jojo-bg: #171827;
+            --jojo-panel: #684583;
+            --jojo-accent: #E3CB67;
+            --jojo-gold: #6da155;
+            --jojo-text: #c5e55d;
+            --jojo-shadow: #100F19;
+            background-color: var(--jojo-bg);
+            background-image: url('/fundo/sbr.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--jojo-text);
+        }
+
+.informacoes.gyro,
+.habilidades.gyro,
+.historia.gyro {
+    background-color: var(--jojo-panel);
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.texto.gyro h2 {
+    color: var(--jojo-accent);
+}
+
+#botao-gyro {
+    background: linear-gradient(135deg, var(--jojo-panel), var(--jojo-accent));
+    color: var(--jojo-text);
+    border: 2px solid var(--jojo-gold);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--jojo-gold) 35%, transparent);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+}
+
+#botao-gyro:hover {
+    filter: brightness(1.12);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--jojo-gold) 60%, transparent);
+}
+
+#botao-gyro:active {
+    transform: scale(0.96);
+}
+
+.imagem.gyro img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+}
+
+.imagem.gyro .imagem-fallback {
+    display: none;
+    min-height: 280px;
+    padding: 24px;
+    place-items: center;
+    text-align: center;
+    border: 2px dashed var(--jojo-accent);
+    border-radius: 12px;
+    color: var(--jojo-text);
+}
+
+/* Gyro Zeppeli */
+
+/* Jobros */

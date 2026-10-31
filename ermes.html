@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Ermes Costello | Jobros</title>
+</head>
+
+<body class="body-ermes">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem ermes">
+            <img src="./fundo/ermes.webp"
+                alt="Ermes Costello" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Ermes Costello">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Ermes Costello.</p>
+            </div>
+
+            <button id="botao-ermes" type="button">
+                💋OSHAAAAAAA!
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-ermes" preload="auto" src="./audio/KissOsha.wav"></audio>
+        </section>
+
+        <section class="texto ermes">
+            <div class="informacoes ermes">
+                <h2>Ermes Costello</h2>
+                <p>Idade: 21 anos</p>
+                <p>Aniversário: 9 de abril de 1990</p>
+                <p>Signo do Zodíaco: Áries</p>
+                <p>Zodíaco Chinês: Cavalo</p>
+                <p>Ocupação: Prisioneira</p>
+                <p>Nacionalidade: Mexicana-estadunidense</p>
+                <p>Altura: 175 cm</p>
+                <p>Peso: 59 kg</p>
+            </div>
+
+            <div class="habilidades ermes">
+                <h2>Habilidades</h2>
+                <p>Stand</p>
+                <p>O Stand de Ermes é a Kiss humanóide, de boa defesa corpo a corpo e ataque, e a habilidade única de duplicar objetos nos quais ela planta um adesivo removível.</p>
+            </div>
+
+            <div class="historia ermes">
+                <h2>História</h2>
+                <p>Ermes é uma mulher presa voluntariamente na Prisão Green Dolphin Street a fim de se vingar do assassino de sua irmã Gloria Costello, Sports Maxx, e logo se alia a Jolyne Cujoh no ambiente hostil que é a prisão. Graças a um certo pingente, Ermes adquire seu próprio Stand, Kiss.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-ermes');
+        const somPersonagem = document.getElementById('som-ermes');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-jobros.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>

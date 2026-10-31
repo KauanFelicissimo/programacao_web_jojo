@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Caesar Anthonio Zeppeli  | Jobros</title>
+</head>
+
+<body class="body-caeser">
+    <div id="header-placeholder"></div>
+    <div id="sidebar-placeholder"></div>
+
+    <main class="conteudo">
+        <section class="imagem caeser">
+            <img src="https://static.wikia.nocookie.net/p__/images/1/19/Golden_Spirit_SSR_Caesar_I.png/revision/latest?cb=20260912204310&path-prefix=protagonist"
+                alt="Caesar Anthonio Zeppeli" loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+            <div class="imagem-fallback" role="img" aria-label="Imagem de Caesar Anthonio Zeppeli">
+                <p>Não foi possível carregar a imagem automaticamente.<br>
+                    Substitua o endereço no atributo <code>src</code> por uma imagem válida de Caesar Anthonio Zeppeli.</p>
+            </div>
+
+            <button id="botao-caeser" type="button">
+                🫧HAMON BUBBLE LAUNCHER!
+            </button>
+
+            <!-- Adicione o caminho do MP3 no atributo src quando tiver o arquivo. -->
+            <audio id="som-caeser" preload="auto" src="./audio/caeser.m4a"></audio>
+        </section>
+
+        <section class="texto caeser">
+            <div class="informacoes caeser">
+                <h2>Caesar Anthonio Zeppeli</h2>
+                <p>Idade: 20 anos</p>
+                <p>Aniversário: 13 de maio de 1918</p>
+                <p>Signo do Zodíaco: Touro</p>
+                <p>Zodíaco Chinês: Cavalo</p>
+                <p>Ocupação: Desconhecido</p>
+                <p>Nacionalidade: Italiano</p>
+                <p>Altura: 186 cm</p>
+                <p>Peso: 90 kg</p>
+            </div>
+
+            <div class="habilidades caeser">
+                <h2>Habilidades</h2>
+                <p>Hamon</p>
+                <p>Sendo um usuário natural do Hamon através da linhagem de seu avô, Caesar foi capaz de projetar seu poder desde tenra idade, embora tenha sido apenas sob a orientação de Lisa Lisa que ele aprendeu a usá-lo corretamente. Caesar é capaz de usar técnicas mais avançadas, como focar o Hamon na ponta dos dedos, e assim como Joseph pode canalizar o Hamon através de objetos, como armas, comida ou até mesmo seres vivos. Em um caso particular, ele colocou uma jovem em hipnose carregando Hamon através dela por meio de um beijo.</p>
+                <p>Bubble Launcher</p>
+                <p>Bubble Barrier</p>
+                <p>Bubble Cutter</p>
+                <p>Bubble Cutter Gliding</p>
+            </div>
+
+            <div class="historia caeser">
+                <h2>História</h2>
+                <p>Caesar é um usuário italiano do Hamon e discípulo de Lisa Lisa. Ele é neto de Will Anthonio Zeppeli e luta contra os Homens do Pilar ao lado de seus aliados e professores para honrar sua herança como Zeppeli.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const botaoSom = document.getElementById('botao-caeser');
+        const somPersonagem = document.getElementById('som-caeser');
+
+        botaoSom.addEventListener('click', async () => {
+            try {
+                somPersonagem.currentTime = 0;
+                await somPersonagem.play();
+            } catch (erro) {
+                console.error('Não foi possível reproduzir o som:', erro);
+            }
+        });
+    </script>
+
+    <script>
+        fetch('./components/sidebar-jobros.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar a sidebar: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar a sidebar de vilões:', erro));
+    </script>
+
+    <script>
+        fetch('./components/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar o cabeçalho: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(erro => console.error('Não foi possível carregar o cabeçalho:', erro));
+    </script>
+</body>
+
+</html>
