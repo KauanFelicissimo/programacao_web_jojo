@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login">
+    <h1 class="titulo">Entre na sua conta!</h1>
+    <form action="" id="login">
+        <label for="nome" class="nome">Nome</label>
+        <input type="text" id="nome" class="nome" required>
+        <br>
+        <label for="senha" class="senha">Senha</label>
+        <input type="password" id="senha" class="senha" required>
+        <br>
+        <p class="verificacao">Não tem uma conta ? <a class="redirecionar" href="registrar.html"> Crie!</a></p>
+        <button type="submit" class="botao">Entre!</button>
+    </form>
+</body>
+</html>
+<script>
+    document.getElementById("login").addEventListener("submit", function(e){
+        e.preventDefault()
+        var nome = document.getElementById("nome").value;
+        var senha = document.getElementById("senha").value;
+
+        var storedSenha = localStorage.getItem(nome);
+
+        if(storedSenha === null){
+            alert("Usuário não encontrado")
+        }
+        else {
+
+            if(storedSenha === senha){
+                alert("Bem-vindo(a) a JoJo!")
+                window.location.href = 'jonathan.html'
+            }
+            else{
+                alert("Senha inválida")
+                return;
+            }
+        }
+        
+    })
+</script>

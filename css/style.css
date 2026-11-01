@@ -1,5 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Login */
+
+.login {
+    background-image: url(https://i.ytimg.com/vi/aCK6qukfEbQ/maxresdefault.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Noto Sans JP', sans-serif;
+    zoom: 0.8;
+    text-align: center;
+
+}
+
+.titulo, .nome, .senha, .verificacao, .botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #4F4CB6;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.redirecionar {
+    text-decoration: none;
+}
+
+
+/* Login */
 * {
 
     box-sizing: border-box;
